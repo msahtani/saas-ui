@@ -1,0 +1,52 @@
+.ca{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.c{
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.ci{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.t{
+    display: flex;
+}
+
+.t > h1{
+    margin: auto;
+}
+
+.gtb{
+    display: flex;
+}
+
+.gtb > button {
+    margin: auto;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #8888;
+    cursor: pointer;
+    background-color: rgb(76, 114, 252);
+    color: white
+}
+
+a {
+    font-size: medium;
+    text-decoration: none;
+    color: #444;
+    width: fit-content !important;
+}
+
+a:hover{
+    color: #888;
+    transition: color 150ms linear;
+}

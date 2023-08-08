@@ -1,0 +1,45 @@
+.ig{
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #aaa;
+    transform: translate(0, 21px);
+    height: 20px;
+    transition: all 250ms ease-in-out;
+    width: fit-content !important;
+    z-index: 0;
+}
+
+input{
+    padding: 1px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    width: 400px;
+    background-color: transparent;
+    z-index: 3;
+}
+
+input:focus{
+    outline: none;
+}
+
+.focus {
+    transform: none;
+    font-size: 0.8rem;
+    transition: all 250ms ease-in-out;
+}
+
+i {
+    margin-left: -30px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 100%;
+    display: inline-flex;
+    padding: 5px;
+}
+
+i:hover{
+    background-color: #ccc;
+}

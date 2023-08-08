@@ -1,0 +1,21 @@
+<div class="ig" #ref>
+    <label 
+        [class.focus]=" value.length !== 0 || focused"
+    > {{label}} </label>
+    <p>
+        <input 
+            [type]="type" 
+            [(ngModel)]="value" 
+            (keyup)="change()" 
+            (focus)="focused = true"
+            (blur)="focused = false"    
+        />
+        <i
+            class="bi"
+            *ngIf="isPassword"
+            [class]=" (type) ? 'bi-eye' : 'bi-eye-slash'"
+            (click) = "showhide()"
+        ></i>
+    </p>
+</div>
+

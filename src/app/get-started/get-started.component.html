@@ -1,0 +1,21 @@
+<div class="ca">
+    <div class="c">
+        <div class="ci">
+            <div class="t">
+                <h1> Get Started with a free account</h1>
+            </div>
+            <app-input-group label="First Name"   [(value)]="form.firstName" />
+            <app-input-group label="Last Name"    [(value)]="form.lastName"/>
+            <app-input-group label="Email"        [(value)]="form.email"/>
+            <app-input-group label="Phone Number" [(value)]="form.phoneNumber"/>
+            <app-input-group label="Password"     [(value)]="form.password" type="password"/>
+            <div class="chbd">
+                <input type="checkbox" />
+                i agree ............
+            </div>
+            <div class="gtb">
+                <button (click)="print()"> GET STARTED </button>
+            </div>
+        </div>
+    </div>
+</div>
