@@ -1,0 +1,11 @@
+i{
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 25px;
+    z-index: 1;
+}
+
+i:hover{
+    background-color: #ddd;
+}

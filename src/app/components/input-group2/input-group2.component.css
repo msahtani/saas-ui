@@ -1,0 +1,32 @@
+.ig{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 0.8rem;
+    transform: translate(20px, 10px);
+    background-color: #eee;
+    padding: 0 4px;
+    width: fit-content;
+    z-index: 1;
+}
+
+input{
+    padding: 10px 5px 5px 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 400px;
+    background-color: #eee;
+    user-select: none;
+    cursor: auto;
+}
+
+i{
+    margin: -39px;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 25px;
+    z-index: 1;
+}

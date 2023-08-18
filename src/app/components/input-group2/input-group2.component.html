@@ -1,0 +1,10 @@
+<div class="ig">
+    <label> {{ label }} </label>
+    <div class="io">
+        <input 
+            type="text" 
+            [(ngModel)]="value"
+            (change)="valueChange.emit(value)"
+            [readonly]="readonly" />
+    </div>
+</div>

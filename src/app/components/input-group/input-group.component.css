@@ -21,6 +21,7 @@ input{
     z-index: 3;
 }
 
+
 input:focus{
     outline: none;
 }
@@ -43,3 +44,4 @@ i {
 i:hover{
     background-color: #ccc;
 }
+

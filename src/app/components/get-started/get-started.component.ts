@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NewUser } from 'src/app/interfaces/new-user';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
     selector: 'app-get-started',
@@ -6,8 +8,12 @@ import { Component } from '@angular/core';
     styleUrls: ['./get-started.component.css']
 })
 export class GetStartedComponent {
+
+    constructor(
+        private authService: AuthService
+    ){}
     
-    form = {
+    form: NewUser = {
         firstName: "",
         lastName: "",
         email: "",
@@ -15,7 +21,7 @@ export class GetStartedComponent {
         password: ""
     }
 
-    print() {
-        console.log(this.form)
+    getStarted(){
+        this.authService.signup(this.form)
     }
 }
