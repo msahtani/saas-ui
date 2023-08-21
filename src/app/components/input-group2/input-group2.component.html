@@ -2,7 +2,7 @@
     <label> {{ label }} </label>
     <div class="io">
         <input 
-            type="text" 
+            [type]="password ? 'password' : 'text' " 
             [(ngModel)]="value"
             (change)="valueChange.emit(value)"
             [readonly]="readonly" />

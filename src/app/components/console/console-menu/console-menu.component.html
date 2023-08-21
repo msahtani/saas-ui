@@ -1,0 +1,7 @@
+<div 
+    *ngFor="let m of menu"
+    [routerLink]="'/console/'+m.link"
+    [ngClass]=" 'menu ' + (currentLink === m.link ? 'selected' : '') "
+>
+    {{ m.name }}
+</div>

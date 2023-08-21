@@ -9,6 +9,7 @@ export class InputGroup2Component {
 
 
     @Input({transform: booleanAttribute}) readonly = false
+    @Input({transform: booleanAttribute}) password = false
     @Input() label!: string
 
     @Input() value!: string

@@ -1,0 +1,35 @@
+.ca{
+    display: flex;
+    height: 100%;
+}
+
+.c {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hr {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+  
+.hr::before,
+.hr::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #888;
+    border-radius: 2px;
+}
+  
+.hr:not(:empty)::before {
+    margin-right: .25em;
+}
+  
+.hr:not(:empty)::after {
+    margin-left: .25em;
+}

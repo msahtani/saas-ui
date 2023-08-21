@@ -1,0 +1,13 @@
+.menu {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    cursor: default;
+}
+
+.selected{
+    background-color: #338;
+}
+
+.menu:not(.selected){
+    cursor: pointer;
+}

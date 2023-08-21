@@ -1,0 +1,76 @@
+.ig{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 0.8rem;
+    transform: translate(20px, 10px);
+    background-color: white;
+    padding: 0 4px;
+    width: fit-content;
+    z-index: 1;
+}
+
+textarea{
+    display: block;
+    padding: 10px 5px 5px 5px;
+    border: 1px solid #000;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 400px;
+    user-select: none;
+    cursor: auto;
+    z-index: 2;
+    position: relative;
+}
+
+i{
+    margin: -39px;
+    display: inline-flex;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 25px;
+    z-index: 1;
+}
+
+
+
+.highlights {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: transparent;
+}
+
+.highlights,
+textarea {
+  padding: 10px 5px 5px 5px;
+  letter-spacing: 1px;
+}
+
+.container{
+    display: block;
+    margin: 0 auto;
+    transform: translateZ(0);
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: auto;
+    pointer-events: none;
+    transition: transform 1s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.count {
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: right;
+}

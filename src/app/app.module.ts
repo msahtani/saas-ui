@@ -11,9 +11,14 @@ import { ConsoleComponent } from './components/console/console.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { ClipboardComponent } from './components/clipboard/clipboard.component';
-import { GetApiComponent } from './components/get-api/get-api.component';
+import { GetApiComponent } from './components/console/console-home/get-api/get-api.component';
 import { InputGroup2Component } from './components/input-group2/input-group2.component';
 import { GTextareaComponent } from './components/g-textarea/g-textarea.component';
+import { SendSmsComponent } from './components/console/console-home/send-sms/send-sms.component';
+import { ConsoleMenuComponent } from './components/console/console-menu/console-menu.component';
+import { ConsoleHomeComponent } from './components/console/console-home/console-home.component';
+import { TemplatedSmsComponent } from './components/console/templated-sms/templated-sms.component';
+import { ModalContainerComponent } from './components/modal-container/modal-container.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { GTextareaComponent } from './components/g-textarea/g-textarea.component
     ClipboardComponent,
     GetApiComponent,
     InputGroup2Component,
-    GTextareaComponent
+    GTextareaComponent,
+    SendSmsComponent,
+    ConsoleMenuComponent,
+    ConsoleHomeComponent,
+    TemplatedSmsComponent,
+    ModalContainerComponent
   ],
   imports: [
     BrowserModule,

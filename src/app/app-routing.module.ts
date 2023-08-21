@@ -5,6 +5,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { ConsoleComponent } from './components/console/console.component';
 import { HomeComponent } from './components/home/home.component';
 import { authGuard, logGuard } from './guards/auth.guard';
+import { ConsoleHomeComponent } from './components/console/console-home/console-home.component';
+import { TemplatedSmsComponent } from './components/console/templated-sms/templated-sms.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,17 @@ const routes: Routes = [
     {
         path: 'console',
         component: ConsoleComponent,
-        canActivate: [authGuard]
+        canActivate: [authGuard],
+        children : [
+            {
+                path: '',
+                component: ConsoleHomeComponent
+            },
+            {
+                path: 'tsms',
+                component: TemplatedSmsComponent
+            }
+        ]
     },
     {
         path: '',

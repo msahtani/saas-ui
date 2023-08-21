@@ -12,18 +12,10 @@
     </header>
 
     <aside class="aside">
+        <app-console-menu />
     </aside>
 
     <main class="main">
-
-        <div class="c">
-            <div class="test">
-                <h1> get started </h1>
-                <app-input-group2 label="phone number"/>
-                <app-input-group2 label="message" />
-            </div>
-            <app-get-api/>
-        </div>
-        
+        <router-outlet></router-outlet>
     </main>
 </div>
