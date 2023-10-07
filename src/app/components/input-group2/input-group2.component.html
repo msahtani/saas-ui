@@ -1,10 +1,16 @@
 <div class="ig">
+    <div class="tooltip" *ngIf="clipboard">
+        <div class="tooltip-text">
+            {{ copied ? "copied!" : "dbl click to copy" }}
+        </div>
+    </div>
     <label> {{ label }} </label>
     <div class="io">
         <input 
-            [type]="password ? 'password' : 'text' " 
+            [type]="password ? 'password' : type " 
             [(ngModel)]="value"
             (change)="valueChange.emit(value)"
-            [readonly]="readonly" />
+            (dblclick)="copyToClipboard()"
+            [disabled]="readonly"/>
     </div>
 </div>

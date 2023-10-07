@@ -6,3 +6,31 @@
     background-color: white;
 }
 
+.sch-wrapper{
+    display: flex;
+    gap: 5px;
+}
+
+#toggle-schedule{
+    display: flex;
+    position: relative;
+    width: fit-content;
+}
+
+.mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#toggle-schedule > input {
+    width: 30px;
+}
+
+button{
+    margin-top: 10px;
+}

@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import Account from 'src/app/interfaces/account';
 import { AccountService } from 'src/app/services/account.service';
+import { ToastService } from 'src/app/services/toast.service';
 
 @Component({
     selector: 'app-get-api',
@@ -9,19 +10,15 @@ import { AccountService } from 'src/app/services/account.service';
 })
 export class GetApiComponent {
 
-    constructor(
-        private account: AccountService
-    ){}
-
-
-    acc: Account = {
-        accountSid: "",
-        authToken: "",
-        balance: 0   
-    }
+    @Input() acc!: Account
 
     @ViewChild("clipboard")
     clipboardBtn!: ElementRef
+
+    constructor(
+        private account: AccountService,
+        private toast: ToastService
+    ){}
 
     copyToClipboard(){
         navigator.clipboard.writeText(
@@ -29,14 +26,20 @@ export class GetApiComponent {
         )
     }
 
-    ngOnInit() {
-        this.account.getAccount()
+    changeAuthToken(){
+        this.account
+            .changeAuth()
             .subscribe(
-                res => {
-                    console.log(res)
-                    this.acc = res
+                (token) => {
+                    console.log(token)
+                    this.acc.authToken = token as string
+                    this.toast.show("auth token updated")
                 }
             )
     }
+
+
+
+    
 
 }

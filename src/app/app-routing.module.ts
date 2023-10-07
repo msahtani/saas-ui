@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { authGuard, logGuard } from './guards/auth.guard';
 import { ConsoleHomeComponent } from './components/console/console-home/console-home.component';
 import { TemplatedSmsComponent } from './components/console/templated-sms/templated-sms.component';
+import { BalanceComponent } from './components/balance/balance.component';
 
 
 const routes: Routes = [
@@ -29,8 +30,8 @@ const routes: Routes = [
                 component: ConsoleHomeComponent
             },
             {
-                path: 'tsms',
-                component: TemplatedSmsComponent
+                path: 'balance',
+                component:  BalanceComponent
             }
         ]
     },

@@ -16,13 +16,13 @@ textarea{
     display: block;
     padding: 10px 5px 5px 5px;
     border: 1px solid #000;
-    background-color: transparent;
+    background-color: white;
     border-radius: 5px;
     width: 400px;
     user-select: none;
     cursor: auto;
-    z-index: 2;
     position: relative;
+    font-size: 0.9rem;
 }
 
 i{
@@ -34,40 +34,6 @@ i{
     z-index: 1;
 }
 
-
-
-.highlights {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    color: transparent;
-}
-
-.highlights,
-textarea {
-  padding: 10px 5px 5px 5px;
-  letter-spacing: 1px;
-}
-
-.container{
-    display: block;
-    margin: 0 auto;
-    transform: translateZ(0);
-}
-
-.backdrop {
-    position: fixed;
-    z-index: 1;
-    border: 1px solid black;
-    border-radius: 5px;
-    overflow: auto;
-    pointer-events: none;
-    transition: transform 1s;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
-}
 
 .count {
     font-size: 0.75rem;

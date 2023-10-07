@@ -1,0 +1,29 @@
+.ca{
+    display: flex;
+    height: 100%;
+}
+
+.c{
+    background-color: #fff;
+    margin: 5px 10px auto 10px;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+}
+
+.ci{
+    margin: auto;
+    display: flex;
+    padding: 5px 0;
+    gap: 100px;
+}
+
+#fund{
+    font-size: 48px;
+    color: #7e7;
+}
+
+#lbl{
+    font-size: 0.7rem;
+    font-weight: 600;
+}

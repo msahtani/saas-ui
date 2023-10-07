@@ -1,15 +1,17 @@
 .ig{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 label{
     display: inline;
     font-size: 0.8rem;
     transform: translate(20px, 10px);
-    background-color: white;
+    background-color: transparent;
     padding: 0 4px;
     width: fit-content;
+    backdrop-filter: blur(10px) brightness(5);
     z-index: 1;
 }
 
@@ -21,13 +23,45 @@ input{
     background-color: white;
     user-select: none;
     cursor: auto;
+    font-size: 0.9rem;
 }
 
-i{
-    margin: -39px;
-    display: inline-flex;
-    padding: 5px;
-    border-radius: 50%;
-    font-size: 25px;
-    z-index: 1;
+::selection {
+    color: black;
+    background: transparent;
+}
+
+.tooltip{
+    position: absolute;
+    background-color: #000a;
+    right: 5px;
+    padding: 1px 5px;
+    border-radius: 5px;
+
+}
+
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #000a transparent transparent transparent;
+}
+
+.tooltip-text{
+    color: white;
+    font-size: 0.7rem;
+}
+
+.tooltip, .tooltip-text{
+    visibility: hidden;
+}
+
+.ig:hover{
+    .tooltip, .tooltip-text{
+        visibility: visible;
+    }
 }

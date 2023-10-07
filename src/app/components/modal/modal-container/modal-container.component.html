@@ -1,0 +1,8 @@
+<ng-container >
+    <ng-template #modal></ng-template>
+</ng-container>
+
+<app-add-btn
+    *ngIf="showAddBtn"
+    (click)="loadInitComponent()"
+/>

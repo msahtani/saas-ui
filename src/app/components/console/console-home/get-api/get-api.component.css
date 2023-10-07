@@ -5,3 +5,15 @@
     border-radius: 5px;
     background-color: white;
 }
+
+.opt {
+    text-align: end;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #46f;
+    cursor: pointer;
+}
+
+.opt:hover{
+    color: #57f;
+}

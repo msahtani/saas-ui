@@ -10,6 +10,25 @@
         label="message" 
         [(value)]="form.body"
     />
+
+    <div class="sch-wrapper">
+        <div id="toggle-schedule">
+            <input
+                type="range" min="0" max="1" 
+                [(ngModel)]="rSchedule"
+            />
+            <div class="mask" (click)="toggle()"></div>
+        </div>
+        
+        <p>schedule</p>
+    </div>
+
+    <app-input-group2
+        *ngIf="rSchedule"
+        label="date and time"
+        type="datetime-local"
+        [(value)]="form.when!"
+    />
     
-    <button> SEND </button>
+    <button (click)="sendSMS()"> SEND </button>
 </div>

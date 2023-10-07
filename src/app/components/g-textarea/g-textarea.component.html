@@ -1,17 +1,12 @@
 <div class="ig">
     <label> {{ label }} </label>
-    <div class="container">
-        <div #backdrop class="backdrop">
-            <div class="highlights" [innerHTML]="highlightedText"></div>
-        </div>
-        <textarea 
-            rows="3"
-            type="text" 
-            [(ngModel)]="value"
-            (change)="valueChange.emit(value)"
-            (scroll)="handleScroll()"
-            [readonly]="readonly" #textarea>
-        </textarea>
-    </div>
+    <textarea 
+        rows="3"
+        type="text" 
+        maxlength="200"
+        [(ngModel)]="value"
+        (change)="valueChange.emit(value)"
+        [readonly]="readonly" #textarea>
+    </textarea>
     <p class="count"> {{ 200 - len }} </p>
 </div>

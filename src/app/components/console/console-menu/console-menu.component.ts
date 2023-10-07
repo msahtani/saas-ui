@@ -18,8 +18,8 @@ export class ConsoleMenuComponent {
             link: ""
         },
         {
-            name: "Templated SMS",
-            link: "tsms"
+            name: "Balance",
+            link: "balance"
         },
         {
             name: "Settings",

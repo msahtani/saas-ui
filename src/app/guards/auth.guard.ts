@@ -8,16 +8,11 @@ export const authGuard: CanActivateFn = (route , state) => {
     const router = inject(Router)
     const auth = inject(AuthService)
 
-    if(auth.authenticated()){
-        return true
-    }
-
-    router.navigate([])
-    return false
+    return true
 }
 
 
 export const logGuard : CanActivateFn = (route,state) => {
     const auth = inject(AuthService)
-    return !auth.authenticated() 
+    return true
 }

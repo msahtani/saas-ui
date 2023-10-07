@@ -5,5 +5,6 @@ export default interface User {
     email: string
     phoneNumber: string
     token?: string
+    sessionId?: string
 
 }

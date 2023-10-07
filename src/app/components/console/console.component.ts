@@ -8,7 +8,7 @@ import { AccountService } from 'src/app/services/account.service';
     templateUrl: './console.component.html',
     styleUrls: ['./console.component.css']
 })
-export class ConsoleComponent implements OnInit{
+export class ConsoleComponent{
 
     constructor(
         private account: AccountService
@@ -24,23 +24,6 @@ export class ConsoleComponent implements OnInit{
     @ViewChild("clipboard")
     clipboardBtn!: ElementRef
 
-    copyToClipboard(){
-        navigator.clipboard.writeText(
-            this.acc.accountSid
-        )
-    }
-
-
-    ngOnInit() {
-        this.account.getAccount()
-            .subscribe(
-                res => {
-                    console.log(res)
-                    this.acc = res
-                }
-            )
-    }
-
-
+    
 
 }

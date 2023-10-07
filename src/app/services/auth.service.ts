@@ -5,6 +5,8 @@ import {environment as e} from "../../environments/environment"
 import AuthRequest from '../interfaces/auth-request';
 import User from '../interfaces/user';
 import { Router } from '@angular/router';
+import { Token } from '@angular/compiler';
+import { catchError, firstValueFrom, from, lastValueFrom, of, tap, throwError } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -14,7 +16,7 @@ export class AuthService {
     constructor(
         private http: HttpClient,
         private router: Router
-    ) { }
+    ) {}
 
     signup(newUser: NewUser){
         const url = e.apiUrl + "/auth/signup"
@@ -33,35 +35,34 @@ export class AuthService {
 
     login(authRequest: AuthRequest){
 
-        const url = e.apiUrl + "/auth/login"
+        const url = e.apiUrl + "/auth"
 
         this.http.post<User>(
-            url, authRequest, {
-                headers: {
-                    "content-type": "application/json"
-                },
-            },
-        ).subscribe(
+            url, authRequest,
+        )
+        .subscribe(
             res => {
-                console.log(res)
-                this.setToken(res.token!)
+                localStorage.setItem("sessionId", res.sessionId!)
+                this.router.navigate(["console"])
+                
             }
         )
-
-
+        
     }
 
-
-    setToken(token: string){
-        localStorage.setItem("token", token)
+    logout(){
+        localStorage.removeItem("token")
+        this.router.navigate(["login"])
     }
 
-    getToken(){
-        return localStorage.getItem("token")
+    getUserSession(){
+
+        const sessionId = localStorage.getItem("sessionId")
+        const url =  `${e.apiUrl}/auth?sessionId=${sessionId}`
+        return this.http.get<User>(url)
+        
     }
 
-    authenticated(){
-        return Boolean(this.getToken()) 
-    }
+   
 
 }
